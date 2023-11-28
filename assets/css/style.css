@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: rgba(237, 77, 27, 1);
+    --color-secondary: rgba(255, 154, 60, 1);
+    --color-black: rgba(0, 0, 0, 1);
+    --color-white: rgba(255, 255, 255, 1);
+    --color-background: rgb(255, 233, 213);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0 1rem;
+}
+
+/* componentes */
+
+
+.logo {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.button {
+    background: var(--color-primary);
+    border: 2px solid var(--color-black);
+    width: fit-content;
+    height: 48px;
+    box-shadow: 4px 4px 0px 0px #1E1E1E;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.title1 {
+    font-size: 64px;
+    font-weight: 900;
+}
+
+.text-decoration {
+    color: var(--color-primary)
+}
+
+.box-plan {
+    width: 204px;
+    height: 306px;
+    border: 2px solid var(--color-black);
+    background-color: var(--color-primary);
+    box-shadow: 4px 4px 0px 0px #000;
+    position: relative;
+    padding: 27px 34px 0 34px;
+    margin: 0 8px;
+    text-align: left;
+}
+
+.box-plan h3 {
+    font-weight: 900;
+    margin: 16px 0;
+}
+
+.box-plan p {
+    font-size: 16px;
+}
+
+.box-plan:nth-of-type(2n) {
+    background-color: var(--color-secondary);
+    position: relative;
+    top: 20px;
+    margin-bottom: 40px;
+}
+
+.arrow-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+a {
+    color: var(--color-black);
+}
+
+/* header */
+
+header, #welcome-section, #plans, footer {
+    border-width: 0 2px 2px 2px;
+    border-style: solid;
+    border-color: var(--color-black);
+}
+
+/* fim componentes */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 26px 20px;
+}
+
+#nav-bar a {
+    font-size: 20px;
+    padding: 10px 30px;
+}
+
+
+/* welcome-section */
+
+#welcome-section {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    padding: 88px 0 194px 5px;
+}
+
+#welcome-column {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 0 5px;
+    padding: 0 30px;
+}
+
+#welcome-column p {
+    margin: 32px 0;
+}
+
+#welcome-column-img {
+    width: 100%;
+}
+
+header .button {
+    margin: 10px 0;
+}
+
+/* plans */
+
+#plans {
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -100px;
+}
+
+#plans .title1 {
+    margin: 50px 0 64px 0;
+    padding: 0 20px;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-evenly;
+    padding: 90px 30px;
+}
+
+footer h3 {
+    margin-top: -40px;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+footer div, form {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#links-footer a {
+    display: block;
+    line-height: 4rem;
+}
+
+#email {
+    border: 2px solid #000;
+    background: #FFF;
+    box-shadow: 4px 4px 0px 0px #000;
+    height: 48px;
+    font-size: 20px;
+    padding: 0 15px;
+}
+
+/* responsividade */
+
+@media (min-width: 1300px) {
+    #welcome-section {
+        padding-left: 30px;
+    }
+    #welcome-column-img {
+        margin-right: 0;
+        width: 750px;
+    }
+    #welcome-column {
+        width: 460px;
+        text-align: left;
+        margin-left: 30px;
+    }    
+}
+
+@media (min-width: 620px) {
+    footer p {
+        max-width: 272px;
+    }
+}
+    
+@media (max-width: 900px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    #nav-bar a {
+        padding: 15px;
+    }
+    .title1 {
+        font-size: 54px;
+    }
+}
+
+
+@media (max-width: 620px) {
+    footer {
+        display: block;
+        padding: 90px 30px;
+    }
+    #links-footer {
+        margin: 50px 0;
+    }
+    .title1 {
+        font-size: 44px;
+    }
+}
